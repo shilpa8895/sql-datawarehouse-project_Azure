@@ -43,9 +43,9 @@ docker run -e "ACCEPT_EULA=Y" \
 ```
 Replace YourStrongPassword! with a strong password (must meet SQL Server password requirements) & <path of the Dataset> with actual path of the data.
 **`Step 4:`** Connect to SQL Server using a SQL client like: Azure Data Studio (recommended for Mac)
-#### -------------------------------------------------------------------------------------------------------------
+
 #### 2. Set Up the Database
-#### -------------------------------------------------------------------------------------------------------------
+
 **`Step 1:`** Open Azure Data Studio, click on: New Connection
 
 **`Step 2:`** Fill in the connection details:
