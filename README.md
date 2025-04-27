@@ -7,3 +7,4 @@ This project implements the Medallion Architecture framework, structured into th
 1. Bronze Layer: Captures raw, unprocessed data directly from source systems. In this project, data is ingested from CSV files into a SQL Server database.
 2. Silver Layer: Focuses on data refinement, including cleansing, standardization, and normalization, to ensure high-quality, analysis-ready data.
 3. Gold Layer: Contains business-ready, curated data, modeled into a star schema to support reporting, analytics, and actionable insights.
+![Screenshot 2025-04-27 at 1 23 20 pm](https://github.com/user-attachments/assets/8e7e7169-9194-4d33-b141-30c783679e4c)
