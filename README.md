@@ -17,18 +17,41 @@ This project implements the Medallion Architecture framework, structured into th
 4. **`Analytics & Reporting:`** Developed SQL queries and dashboards to translate raw data into meaningful, actionable business insights.
 
 ### Project Setup
-1. Install SQL Server on MacBook: Since SQL Server does not run natively on macOS,set it up using Docker:
- **`Step 1:`** Install Docker Desktop for Mac.
- **`Step 2:`** Pull the SQL Server Docker image:
+#### 1. Install SQL Server on MacBook: Since SQL Server does not run natively on macOS,set it up using Docker:
+**`Step 1:`** Install Docker Desktop for Mac.
+**`Step 2:`** Pull the SQL Server Docker image:
 ```
 docker pull mcr.microsoft.com/mssql/server
 ```
- **`Step 3:`** Run the SQL Server container:
+**`Step 3:`** Run the SQL Server container:
 ```
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrongPassword!' \
 -p 1433:1433 --name sql_server_container -d mcr.microsoft.com/mssql/server
 ```
-Replace YourStrongPassword! with a strong password (must meet SQL Server password requirements).
+If you wanted to load the local files in the computer in the sql server then we  have to explicityly mount the folder into the docker container.
+```
+docker run -e "ACCEPT_EULA=Y" \
+  -e "MSSQL_SA_PASSWORD=MyStrongPassword123" \
+  -p 1433:1433 \
+  -v <path of the Dataset> \
+  --name sql-server-container \
+  -d mcr.microsoft.com/mssql/server:2022-latest
 
- **`Step 4:`** Connect to SQL Server using a SQL client like: Azure Data Studio (recommended for Mac)
+```
+Replace YourStrongPassword! with a strong password (must meet SQL Server password requirements) & <path of the Dataset> with actual path of the data.
+**`Step 4:`** Connect to SQL Server using a SQL client like: Azure Data Studio (recommended for Mac)
+
+#### 2. Set Up the Database
+**`Step 1:`** Open Azure Data Studio, click on: New Connection
+
+**`Step 2:`** Fill in the connection details:
+
+Server: localhost
+Port: 1433 (SQL Server inside Docker maps container's 1433 port to your Mac’s 1433)
+Authentication type: SQL Login
+Username: sa
+Password: the password you set in Docker (YourStrongPassword!)
+
+**`Step 3:`** Connect — and you’re in!
+
 
