@@ -69,6 +69,7 @@ These insights empower stakeholders with key business metrics, enabling strategi
 #### -------------------------------------------------------------------------------------------------------------
 ### Repository Structure
 #### -------------------------------------------------------------------------------------------------------------
+```plaintext
 data-warehouse-project/
 │
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
@@ -90,7 +91,7 @@ data-warehouse-project/
 │   ├── quality_checks_silver.sql       # Scripts for checking the silver layer data
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
-
+```
 #### -------------------------------------------------------------------------------------------------------------
 ### Liscense
 #### -------------------------------------------------------------------------------------------------------------
