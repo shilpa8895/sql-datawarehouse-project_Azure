@@ -18,17 +18,17 @@ This project implements the Medallion Architecture framework, structured into th
 
 ### Project Setup
 1. Install SQL Server on MacBook: Since SQL Server does not run natively on macOS,set it up using Docker:
-Step 1: Install Docker Desktop for Mac.
-Step 2: Pull the SQL Server Docker image:
+ **`Step 1:`** Install Docker Desktop for Mac.
+ **`Step 2:`** Pull the SQL Server Docker image:
 ```
 docker pull mcr.microsoft.com/mssql/server
 ```
-Step 3: Run the SQL Server container:
+ **`Step 3:`** Run the SQL Server container:
 ```
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrongPassword!' \
 -p 1433:1433 --name sql_server_container -d mcr.microsoft.com/mssql/server
 ```
 Replace YourStrongPassword! with a strong password (must meet SQL Server password requirements).
 
-Step 4: Connect to SQL Server using a SQL client like: Azure Data Studio (recommended for Mac)
+ **`Step 4:`** Connect to SQL Server using a SQL client like: Azure Data Studio (recommended for Mac)
 
