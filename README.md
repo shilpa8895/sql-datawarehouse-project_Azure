@@ -69,7 +69,27 @@ These insights empower stakeholders with key business metrics, enabling strategi
 #### -------------------------------------------------------------------------------------------------------------
 ### Repository Structure
 #### -------------------------------------------------------------------------------------------------------------
-
+data-warehouse-project/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── data_integration.png            # Lucid chart file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.png                   # Lucid chart file for the data flow diagram
+│   ├── data_models.png                 # Lucid chart file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│   ├── quality_checks_gold.sql         # Scripts for checking the gold layer data
+│   ├── quality_checks_silver.sql       # Scripts for checking the silver layer data
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
 
 #### -------------------------------------------------------------------------------------------------------------
 ### Liscense
